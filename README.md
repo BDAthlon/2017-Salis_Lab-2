@@ -18,7 +18,6 @@ Circuit Globs comes with it's own original grammar for specifying programs for g
 # The Grammar
 
 Circuit Globs programs are written in two major steps. At first the parts and reporter proteins are defined in a variable `species` as a Python multi-line string. Each line in the species defines a single part of the circuit in the form `<part_name> <maximum_translation_rate> <initial_concentration>`. For example:
-
 ```
 species = '''
     R1 60 10
@@ -28,7 +27,6 @@ species = '''
 '''
 ```
 Here, we have three proteins R1, R2, R3 and a reporter protein RFP. Next, the actual program defining the circuit logic is written in the form `<part_i> <action> <part_j> (context_value_1,context_value_2)` as a multi-line string, stored in the variable `program`. All `part_name` being used in the program must be defined in the `species` variable, or else the `gcparser` module raises an execption. The `action` defines the effect `part_i` has on `part_j` and can be one of `<activates, represses, inverts>` type. The `context_value_1` and `context_value_2` imply different meaning in the context of specified action. In case of activation and repression they are `kd` and `n` values, while in case of inversion they are `p` and `t` values. For example, consider the following repressilator `program` for the above defined `species`:
-
 ```
 program = '''
     R1 represses R2 (0.7,2)
@@ -38,3 +36,36 @@ program = '''
 '''
 ```
 
+# Example: Python program to design and simulate a repressilator
+
+Once cloned/downloaded it is very easy to run Circuit Globs. Let's try to cover as many randomly generated green globs using the repressilator being discussed so far. Note: This example is present in and can be run from the examples directory along with a few more. Let's set up the basics.
+```
+# Make sure Python finds circuitsglobs modules
+import numpy as np
+import gcparser
+import model
+from animate import Puzzle, Graphics
+
+# Makes the Puzzle consistent, can be changed or removed
+import random
+random.seed(12)
+```
+Now, that we have all modules we need, let's create a puzzle to solve. We can even plot it and see before we attempt anything.
+```
+Puzzle1 = Puzzle(difficulty=6)
+# Puzzle1.plot() # When uncommented displays the puzzle before solution
+```
+After we define the `species` and `program` as shown in The Grammar section, we create a parsed structure:
+```
+def_struct, prg_struct = gcparser.get_parsed_struct(species, program)
+```
+Next, we create an instance of our ODE solver and solve the circuit ODEs.
+```
+odesolver = model.CircuitModel(a,b)
+(time,reporters,data) = odesolver.run()
+```
+Everything is done quickly...time to visualize our solution!
+```
+GraphicsObject = Graphics(time,data,Puzzle1.globs)
+GraphicsObject.generate()
+```
