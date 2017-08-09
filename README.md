@@ -8,7 +8,7 @@ Circuit Globs was developed in Python 2.7 and uses the standard Python science s
 
 # Module Structure
 
-Circuit Globs comes with it's own original grammar for specifying programs for genetic circuits and a parser to translate those programs into intermediate data structures. These intermediate structures that are then used to derive ODEs for the genetic parts on the fly and capture their interplay. These ODEs are then solved to define the characteristics of the genetic circuit. `Matplotlib` is used to display randomly initialized green blobs (a manner of puzzle) and the ODE solutions are then plotted against them to determine the success of the system in matching the blobs.
+Circuit Globs comes with it's own original grammar for specifying programs for genetic circuits and a parser to translate those programs into intermediate data structures. These intermediate structures that are then used to derive ODEs for the genetic parts on the fly and capture their interplay. These ODEs are then solved to define the characteristics of the genetic circuit. `Matplotlib` is used to display randomly initialized green globs (a manner of puzzle) and the ODE solutions are then plotted against them to determine the success of the system in matching the globs.
 
 * `gcparser.py` contains all functions to translate user-defined genetic circuit programs into data structures for ODE solver
 * `model.py` contains all functions for deriving and solving the ODEs from the parsed circuit information
