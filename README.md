@@ -1,6 +1,6 @@
 # Circuit Globs
 
-Circuit Globs aims to be a simple Python module to display the characteristic curves of simple genetic circuits. The aim is to define a set of genetic parts and reporter proteins that interact each other via a set of actions to maximize co-incidence of the curve produced with randomly populated green globs on a Xy plane. It is envisoned both as a game and a learning tool.
+Circuit Globs is a simple Python module to display the characteristic curves of simple genetic circuits. The aim is to define a set of genetic parts and reporter proteins that interact each other via a set of actions to maximize co-incidence of the solution curve with randomly populated green globs on a Xy plane. It is envisoned both as a game and a learning tool.
 
 # Getting Started
 
