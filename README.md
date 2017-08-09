@@ -73,7 +73,7 @@ GraphicsObject.generate()
 
 # License
 
-Circuit Globs is openly distributed under MIT License. See LICENSE file present with this repository for more details.
+Circuit Globs is written completely from scratch for BDAthlon 2017 and is openly distributed under MIT License. See LICENSE file present with this repository for more details.
 
 # Authors
 * Ayaan Hossain (auh57@psu.edu)
