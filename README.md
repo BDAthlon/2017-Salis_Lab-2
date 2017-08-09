@@ -50,7 +50,7 @@ from animate import Puzzle, Graphics
 import random
 random.seed(12)
 ```
-Now, that we have all modules we need, let's create a puzzle to solve. We can even plot it and see before we attempt anything.
+Now, that we have all modules we need, let's create a medium difficulty puzzle to solve (higher difficulty implies lesser globs most of which vary in sizes and scale down in diameter). We can even plot it and see before we attempt anything.
 ```
 Puzzle1 = Puzzle(difficulty=6)
 # Puzzle1.plot() # When uncommented displays the puzzle before solution
@@ -61,12 +61,12 @@ def_struct, prg_struct = gcparser.get_parsed_struct(species, program)
 ```
 Next, we create an instance of our ODE solver and solve the circuit ODEs.
 ```
-odesolver = model.CircuitModel(a,b)
-(time,reporters,data) = odesolver.run()
+odesolver = model.CircuitModel(def_struct, prg_struct)
+(time, reporters, data) = odesolver.run()
 ```
 Everything is done quickly...time to visualize our solution!
 ```
-GraphicsObject = Graphics(time,data,Puzzle1.globs)
+GraphicsObject = Graphics(time, data, Puzzle1.globs)
 GraphicsObject.generate()
 ```
 ![repressilator.png](https://github.com/BDAthlon/2017-Salis_Lab-2/blob/master/repressilator.png "Circuit Glob: Repressilator")
