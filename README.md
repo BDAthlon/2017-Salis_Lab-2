@@ -40,7 +40,7 @@ program = '''
 
 Once cloned/downloaded it is very easy to run Circuit Globs. Let's try to cover as many randomly generated green globs using the repressilator being discussed so far. Note: This example is present in and can be run from the examples directory along with a few more. Let's set up the basics.
 ```
-# Make sure Python finds circuitsglobs modules
+# Make sure Python finds circuitglobs modules
 import numpy as np
 import gcparser
 import model
@@ -70,3 +70,12 @@ GraphicsObject = Graphics(time, data, Puzzle1.globs)
 GraphicsObject.generate()
 ```
 ![repressilator.png](https://github.com/BDAthlon/2017-Salis_Lab-2/blob/master/repressilator.png "Circuit Glob: Repressilator")
+
+# License
+
+This is openly distributed under MIT License. See LICENSE file present with this repository for more details.
+
+# Authors
+Ayaan Hossain (auh57@psu.edu)
+Sean Halper (sxh456@psu.edu)
+Alexander Reis (acr219@psu.edu)
