@@ -1,4 +1,4 @@
-# Tackling a difficult Circuit-Glob puzzle with the repressilator
+# Using inverter/terminator programming to turn on/off a reporter
 
 import sys
 sys.path.append('../circuitglobs')

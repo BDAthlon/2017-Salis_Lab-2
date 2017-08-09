@@ -1,4 +1,4 @@
-# Tackling a difficult Circuit-Glob puzzle with the repressilator
+# Tackling an easy Circuit-Glob puzzle with a NOT-gate
 
 import sys
 sys.path.append('../circuitglobs')
