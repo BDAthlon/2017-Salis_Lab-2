@@ -55,7 +55,7 @@ Now, that we have all modules we need, let's create a puzzle to solve. We can ev
 Puzzle1 = Puzzle(difficulty=6)
 # Puzzle1.plot() # When uncommented displays the puzzle before solution
 ```
-After we define the `species` and `program` as shown in The Grammar section, we create a parsed structure:
+After we define the `species` and `program` as shown in The Grammar section, we create parsed structures:
 ```
 def_struct, prg_struct = gcparser.get_parsed_struct(species, program)
 ```
@@ -69,3 +69,4 @@ Everything is done quickly...time to visualize our solution!
 GraphicsObject = Graphics(time,data,Puzzle1.globs)
 GraphicsObject.generate()
 ```
+![repressilator.png](https://github.com/BDAthlon/2017-Salis_Lab-2/blob/master/repressilator.png "Circuit Glob: Repressilator")
