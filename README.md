@@ -76,6 +76,6 @@ GraphicsObject.generate()
 Circuit Globs is openly distributed under MIT License. See LICENSE file present with this repository for more details.
 
 # Authors
-Ayaan Hossain (auh57@psu.edu)
-Sean Halper (sxh456@psu.edu)
-Alexander Reis (acr219@psu.edu)
+* Ayaan Hossain (auh57@psu.edu)
+* Sean Halper (sxh456@psu.edu)
+* Alexander Reis (acr219@psu.edu)
